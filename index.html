@@ -1,87 +1,11 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#10131a">
-  <title>Duck Empire — V1</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="app">
-  <header class="topbar">
-    <div class="profile"><div class="avatar">🦆</div><div><b id="playerName">Duck Master</b><small>المستوى <span id="playerLevel">1</span></small></div></div>
-    <div class="balances"><span>🪙 <b id="coins">12500</b></span><span>🌽 <b id="corn">850</b></span></div>
-  </header>
-
-  <main>
-    <section id="home" class="screen active">
-      <div class="hero-card">
-        <div class="glow"></div>
-        <div class="rarity">LEGENDARY</div>
-        <div class="duck-wrap">
-          <div class="duck-shadow"></div>
-          <div class="duck">🦆</div>
-          <div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">✦</div>
-        </div>
-        <h1>Golden Emperor</h1>
-        <div class="stats"><span>LV <b id="duckLevel">12</b></span><span>⚡ 9,842 Power</span><span>🍀 82% Luck</span></div>
-        <div class="xp"><div id="xpBar"></div></div>
-        <small><span id="xpText">820</span> / 1000 XP</small>
-        <button id="feedBtn" class="primary">🌽 إطعام ×10 <span>+250 XP</span></button>
-        <div class="production">الإنتاج الآن <b>+125 🪙/ساعة</b></div>
-      </div>
-
-      <div class="section-head"><h2>مزرعتي</h2><button onclick="openScreen('eggs')">فتح الحقل ›</button></div>
-      <div id="farm" class="farm"></div>
-    </section>
-
-    <section id="eggs" class="screen">
-      <div class="title-row"><h1>🥚 حقل البيض</h1><div class="seg"><button class="selected" data-size="5">5×5</button><button data-size="7">7×7</button></div></div>
-      <p class="muted">اسحب البيضة فوق بيضة من نفس المستوى للدمج. Smart Merge متاح.</p>
-      <div id="eggField" class="egg-field"></div>
-      <div class="egg-actions"><button class="secondary" id="smartMerge">✨ Smart Merge</button><button class="primary small" id="hatch">🥚 فقس</button></div>
-    </section>
-
-    <section id="ducks" class="screen">
-      <div class="title-row"><h1>🦆 بطّي</h1><button class="secondary small">فلترة</button></div>
-      <div class="duck-grid">
-        <article class="duck-card legendary"><div class="bigduck">🦆</div><b>Golden Emperor</b><span>Legendary • LV12</span><button>التفاصيل</button></article>
-        <article class="duck-card epic"><div class="bigduck">🦆</div><b>Royal Scout</b><span>Epic • LV8</span><button>التفاصيل</button></article>
-        <article class="duck-card rare"><div class="bigduck">🦆</div><b>Azure Runner</b><span>Rare • LV6</span><button>التفاصيل</button></article>
-      </div>
-    </section>
-
-    <section id="tasks" class="screen">
-      <h1>🎯 المهام</h1>
-      <div class="task done"><div>🌽 أطعم بطتك 20 مرة<small>20 / 20</small></div><b>+500 🪙</b><button>استلام</button></div>
-      <div class="task"><div>🥚 ادمج 5 بيضات<small>3 / 5</small></div><b>+2 🎟</b><button>جارٍ</button></div>
-      <div class="task"><div>👥 ادعُ صديقًا<small>0 / 1</small></div><b>+1 ❤️</b><button>دعوة</button></div>
-    </section>
-
-    <section id="market" class="screen">
-      <div class="title-row"><h1>🛒 السوق</h1><button class="secondary small">بيع بطتي</button></div>
-      <div class="market-card"><div class="bigduck">🦆</div><div><b>Royal Scout</b><span>Epic • LV8</span><strong>85,000 🪙</strong></div><button class="primary small">شراء</button></div>
-      <div class="market-card"><div class="bigduck">🦆</div><div><b>Azure Runner</b><span>Rare • LV6</span><strong>24,500 🪙</strong></div><button class="primary small">شراء</button></div>
-    </section>
-
-    <section id="breeding" class="screen">
-      <h1>❤️ التربية</h1>
-      <div class="breeding"><div>🦆<small>بطتي</small></div><span>＋</span><div>🦆<small>شريك</small></div></div>
-      <button class="primary" id="breedBtn">❤️ بدء التربية</button>
-      <p class="muted">سيتم إضافة نظام الصفات الوراثية والـLove Eggs في المرحلة التالية.</p>
-    </section>
-  </main>
-
-  <nav class="bottom-nav">
-    <button class="active" data-screen="home">🏠<span>الرئيسية</span></button>
-    <button data-screen="eggs">🥚<span>البيض</span></button>
-    <button data-screen="ducks">🦆<span>البط</span></button>
-    <button data-screen="market">🛒<span>السوق</span></button>
-    <button data-screen="tasks">🎯<span>المهام</span></button>
-  </nav>
-</div>
-<div id="toast"></div>
-<script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090c12"><title>Duck Empire V2</title><link rel="stylesheet" href="style.css"></head><body><div id="app">
+<header><div class="player"><div class="avatar">👑</div><div><b>Duck Master</b><small>LV <span id="level">1</span> · 820/1000 XP</small></div></div><div class="wallet"><span>🪙 <b id="coins">12500</b></span><span>🌽 <b id="food">850</b></span><span>⚡ <b id="energy">80</b></span></div></header>
+<main>
+<section id="home" class="page active"><div class="scene"><div class="sun"></div><div class="cloud">☁️</div><div class="pond">💧</div><div class="tree">🌳</div><div class="rarity">LEGENDARY</div><div class="duck">🦆</div><h1>Golden Emperor</h1><p>المستوى 12 · قوة 9,842</p><div class="bar"><i></i></div><button class="gold" id="feed">🌽 إطعام البطة <em>−10</em></button></div>
+<div class="quick"><button data-page="merge">🥚<b>Egg Field</b><small>دمج البيض</small></button><button data-page="breeding">❤️<b>Breeding</b><small>تربية البط</small></button><button data-page="rewards">🎁<b>Rewards</b><small>المكافآت</small></button><button data-page="market">🛒<b>Market</b><small>السوق</small></button></div>
+<h2>إحصائيات المزرعة</h2><div class="stats"><div>🦆<b>24</b><small>البط</small></div><div>🥚<b>138</b><small>البيض</small></div><div>🪙<b>+125/h</b><small>الإنتاج</small></div><div>🔥<b>7</b><small>Streak</small></div></div></section>
+<section id="merge" class="page"><div class="head"><button class="back">‹</button><h1>🥚 Egg Field</h1><div class="seg"><button class="on" data-size="5">5×5</button><button data-size="7">7×7</button></div></div><p>ادمج المتشابه لفتح بط أقوى.</p><div id="field" class="field"></div><div class="actions"><button id="smart">✨ Smart Merge</button><button class="gold small" id="hatch">🥚 Hatch</button></div></section>
+<section id="breeding" class="page"><div class="head"><button class="back">‹</button><h1>❤️ Breeding</h1></div><div class="parents"><div>🦆<small>البطة الأولى</small></div><b>＋</b><div>🦆<small>الشريك</small></div></div><button class="gold" id="breed">❤️ بدء التربية</button></section>
+<section id="rewards" class="page"><div class="head"><button class="back">‹</button><h1>🎁 Rewards</h1></div><div class="card">🎁 <b>Daily Reward</b><span>+2,500 🪙</span><button>استلام</button></div><div class="card">🎯 <b>Feed Master</b><span>18 / 20 · +500 🪙</span><button>جارٍ</button></div><div class="card">👥 <b>Invite a Friend</b><span>+1 🎟</span><button>دعوة</button></div></section>
+<section id="market" class="page"><div class="head"><button class="back">‹</button><h1>🛒 Market</h1></div><div class="card big">🦆 <div><b>Royal Scout</b><small>Epic · LV 8</small><strong>85,000 🪙</strong></div><button class="gold small">شراء</button></div><div class="card big">🥚 <div><b>Mystic Egg</b><small>Rare Egg</small><strong>12,500 🪙</strong></div><button class="gold small">شراء</button></div></section>
+</main><nav><button class="active" data-page="home">🏠<small>Home</small></button><button data-page="merge">🥚<small>Merge</small></button><button data-page="breeding">❤️<small>Breed</small></button><button data-page="rewards">🎁<small>Rewards</small></button><button data-page="market">🛒<small>Market</small></button></nav><div id="toast"></div></div><script src="app.js"></script></body></html>
